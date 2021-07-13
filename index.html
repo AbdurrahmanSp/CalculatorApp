@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/style.css">
+  <title>Calculator app</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <section class="calc">
+
+    <!-- Calc And Theme Section  -->
+    <div class="calc__calc-theme">
+      <span>calc</span>
+      <div class="toggle-container">
+        <span>theme</span>
+        <input type="checkbox" id="switch" name="theme" /><label
+        for="switch">toggle</label>
+      </div>
+    </div>
+    <!-- Calc And Theme Section End -->
+
+    <!-- Display Section -->
+    <form class="calc__display">
+      <input class="display__val">
+    </form>
+    <!-- Display Section End -->
+
+    <!-- Keys Section -->
+    <div class="calc__keys-container">
+      <table>
+        <tr>
+          <td><input type="button" value="7" onclick="insrt(7)"></td>
+          <td><input type="button" value="8" onclick="insrt(8)"></td>
+          <td><input type="button" value="9" onclick="insrt(9)"></td>
+          <td><input type="button" value="del" onclick="del()"></td>
+        </tr>
+  
+        <tr>
+          <td><input type="button" value="4" onclick="insrt(4)"></td>
+          <td><input type="button" value="5" onclick="insrt(5)"></td>
+          <td><input type="button" value="6" onclick="insrt(6)"></td>
+          <td><input type="button" value="+" onclick="insrt('+')"></td>
+        </tr>
+  
+        <tr>
+          <td><input type="button" value="1" onclick="insrt(1)"></td>
+          <td><input type="button" value="2" onclick="insrt(2)"></td>
+          <td><input type="button" value="3" onclick="insrt(3)"></td>
+          <td><input type="button" value="-" onclick="insrt('-')"></td>
+        </tr>
+  
+        <tr>
+          <td><input type="button" value="." onclick="insrt('.')"></td>
+          <td><input type="button" value="0" onclick="insrt(0)"></td>
+          <td><input type="button" value="/" onclick="insrt('/')"></td>
+          <td><input type="button" value="x" onclick="insrt('*')"></td>
+        </tr>
+  
+        <tr class="lastTr">
+          <td><input type="button" value="reset" onclick="res()"></td>
+          <td><input data="orange" type="button" value="=" onclick = "eql()"></td>
+        </tr>
+      </table>
+    </div>
+    <!--  Keys Setion End -->
+  </section>
+
+  <script src="/app/JS/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+.calc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 280px;
+    height: 500px;
+    margin: auto;
+    top: calc(50vh - 250px);
+
+    @include breakpoint-up(large) {
+        position: relative;
+        height: 590px;
+        right: 10%;
+        top: calc(50vh - 330px);
+    }
+
+    // Calc And Theme Section
+    &__calc-theme {
+        width: 260px;
+        margin: auto;
+
+        @include breakpoint-up(large) {
+            width: 480px;
+            margin: auto;
+        }
+
+        .theme-light {
+            color: $veryDarkGrayishBlue;
+        }
+
+        // Calc
+        span {
+            position: relative;
+            color: $white;
+            font-size: 21px;
+            top: 25px;
+
+            @include breakpoint-down(medium) {
+                font-size: 28px;
+            }
+        }
+
+        // Theme Switch
+        .toggle-container {
+            float: right;
+            
+            span {
+                position: relative;
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                right: 65px;
+                top: 25px;
+            }
+
+            input[type=checkbox]{
+                height: 0;
+                width: 0;
+                visibility: hidden;
+            }
+            
+            label {
+                position: relative;
+                background-color:  $desaturatedDarkBlue;
+                display: block;
+                width: 52px;
+                height: 20px;
+                text-indent: -9999px;
+                border-radius: 100px;
+                cursor: pointer;
+
+                @include breakpoint-down(medium) {
+                    position: relative;
+                    width: 58px;
+                    height: 26px;
+                    bottom: 7px;
+                    
+                }
+
+            }
+            
+            .toggle-light {
+                background: $grayishRed;
+            }
+            
+            label:after {
+                content: '';
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                top: 3.2px;
+                left: 5px;
+                background: $red;
+                border-radius: 90px;
+                transition: 300ms;
+
+                @include breakpoint-down(medium) {
+                    width: 20px;
+                    height: 20px;
+                }
+
+            }
+            
+            input:checked + label:after {
+                left: calc(100% - 5px);
+                transform: translateX(-100%);
+            }
+            
+            label:active:after {
+                width: 45px;
+            } 
+        }
+        // Theme Switch End
+    }
+    //  Calc And Theme Section End
+
+    // Display Section
+    &__display{
+
+        width: 260px;
+        height: 70px;
+        margin: auto;
+
+        @include breakpoint-up(large) {
+            width: 480px;
+        }
+
+        // Diplay Value
+        .display__val {
+            width: 255px;
+            height: 70px;
+            border-radius: 8px;
+            border: none;
+            background-color: $veryDarkDesaturatedBlueS;
+            color: $white;
+            outline: none;
+            text-align: right;
+
+            @include breakpoint-up(large) {
+                width: 475px;
+                border-radius: 5px;
+            }
+        }
+
+        .display__val-light {
+            background: $veryLightGrey;
+            color :$veeryDarkGrayishYellow; 
+        }
+    }
+    // Display Section End
+
+    // Keys Section
+    &__keys-container {
+        width: 260px;
+        height: 320px;
+        margin: auto;
+        background-color: $desaturatedDarkBlue;
+        border-radius: 8px;
+
+        @include breakpoint-up(large) {
+            width: 480px;
+            height: 370px;
+            border-radius: 5px;
+        }
+
+        // Small Keys
+        table {
+            position: relative;
+            top: 8px;
+            left:16px;  
+
+             @include breakpoint-up(large) {
+                left: 19px;
+                top: 13px;
+             }
+        }
+
+        // Big Keys
+        .lastTr {
+            position: absolute;
+        }
+    }
+
+    .keys-container-light {
+        background: $grayishRed;
+    }
+    // Keys Section End
+}

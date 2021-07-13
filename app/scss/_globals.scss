@@ -1,0 +1,76 @@
+* {
+    font-family: 'Spartan', sans-serif;
+    font-size: 32px;
+
+}
+
+body {
+    background-color: $veryDarkDesaturatedBlueMb;
+}
+
+.body_light {
+    background-color:$lightGray ;
+}
+
+// Keys
+input[type=button] {
+    width: 47px;
+    height: 50px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    background-color: $lightGrayishOrange;
+    color: $veryDarkGrayishBlue;
+    line-height: 1.9;
+    box-shadow: $darkGrayishOrange 0px 3px;
+    cursor: pointer;
+
+    @include breakpoint-up(large) {
+        width: 92px;
+        height: 50px;
+        margin: 7px;
+        left: 19px;
+        top: 13px;
+    }
+}
+
+// Dell Key 
+input[value=del] {
+    background-color: $veryDarkDesaturatedBlueTb;
+    color: $white;
+    line-height: 4.5;
+    font-size: 12px;
+    text-transform: uppercase;
+    box-shadow: $veryDarkDesaturatedBlueMb 0px 3px;
+}
+
+// Reset key
+input[value=reset] {
+    width: 100px;
+    background-color: $veryDarkDesaturatedBlueTb;
+    color: $white;
+    font-size: 12px;
+    text-transform: uppercase;
+    box-shadow: $veryDarkDesaturatedBlueMb 0px 3px;
+
+    @include breakpoint-up(large) {
+        width: 200px;
+    }
+}
+
+.resetLight {
+    background-color: $darkMedorateCyan;
+}
+
+// Orange Key
+input[data=orange] {
+    width: 106px;
+    background-color: $red;
+    color: $white;
+    font-size: 22px;
+    box-shadow: $darkRed 0px 3px;
+
+    @include breakpoint-up(large) {
+        width: 200px;
+    }
+}
