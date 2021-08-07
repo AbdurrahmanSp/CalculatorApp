@@ -13,9 +13,3 @@ Responsive calculator with two theme.
 - Mobile-first workflow
 - [JQuery](https://jquery.com/) - JS library
 
-## Author
-
-### My social
-
-- Instagram - [@ya_abdurrhman](https://www.instagram.com/ya_abdurrahman/)
-- Facebook - [@Abdurrhamn Spahic](https://www.facebook.com/abdurrahman.spahic/)
